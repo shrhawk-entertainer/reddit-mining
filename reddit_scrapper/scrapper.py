@@ -11,7 +11,7 @@ class RedditScrapper(object):
     sub_reddit_instance = None
     reddit_topic = ''
     reddit_topic_time_filter = 'week'
-    reddit_topic_top_limit = 1000
+    reddit_topic_top_limit = 5000
     topics = []
     mongo_client = None
 
