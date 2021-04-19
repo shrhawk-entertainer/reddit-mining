@@ -24,7 +24,7 @@ class RedditScrapperMongo(object):
 
     def insert_topic(self, reddit_topic=None):
         """
-        Insert an entry using upsert mechnism for mongo-db.
+        Insert an entry using upsert mechanism for mongo-db.
         """
         if reddit_topic:
             reddit_topic_id = convert_string_to_object_id(reddit_topic.id)
@@ -43,6 +43,8 @@ class RedditScrapperMongo(object):
                 },  # updates
                 upsert=True
             )
+            return True
+        return False
 
 
 
