@@ -43,12 +43,12 @@ class RedditScrapper(object):
         Insert the data to mongo-db
         """
         for topic in self.topics:
-            print("========================================================================")
             crypto_symbol_comments_mentioned_count = 0
             crypto_symbol, crypto_symbol_found_location = extract_crypto_symbol(topic.title), 'title'
             if not crypto_symbol:
                 crypto_symbol, crypto_symbol_found_location = extract_crypto_symbol(topic.selftext), 'description'
             if crypto_symbol:
+                print("========================================================================")
                 setattr(topic, 'crypto_symbol', crypto_symbol)
                 setattr(topic, 'created_at', convert_unix_timestamp_to_date_time(topic.created_utc))
                 setattr(topic, 'symbol_found_location', crypto_symbol_found_location)
@@ -62,7 +62,6 @@ class RedditScrapper(object):
                         crypto_symbol_comments_mentioned_count += 1
                 setattr(topic, 'crypto_symbol_comments_mentioned_count', crypto_symbol_comments_mentioned_count)
                 self.mongo_client.insert_topic(reddit_topic=topic)
-            break
 
     def run(self):
         self.fetch_reddit_topics()
