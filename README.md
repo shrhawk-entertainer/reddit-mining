@@ -5,7 +5,7 @@
 ```shell
 $ mongod
 ```
-3. You will need your own Reddit account and API credentials for PRAW (used for mining reddit).Refer to this [guide](https://github.com/JosephLai241/URS/blob/master/docs/How%20to%20Get%20PRAW%20Credentials.md) to get your credentials, then update the environment variables located in .env.
+2. You will need your own Reddit account and API credentials for PRAW (used for mining reddit).Refer to this [guide](https://github.com/JosephLai241/URS/blob/master/docs/How%20to%20Get%20PRAW%20Credentials.md) to get your credentials, then update the environment variables located in .env.
 
 
 Before running the app assuming that **python 3.7.xx** is installed on development machine
