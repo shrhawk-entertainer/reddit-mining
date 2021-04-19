@@ -3,6 +3,7 @@ envname/
 venv/
 .idea/
 .DS_Store
+.env
 *.pyc
 .vscode/
 .pytest_cache/
