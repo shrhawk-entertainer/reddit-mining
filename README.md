@@ -1,7 +1,11 @@
 # Reddit Crypto Mining
 
 ## Requirements:
-You will need your own Reddit account and API credentials for PRAW. See the Getting Started section for more information.
+1. This app required a MongoDB instance is running on the default host and port. Assuming you have [downloaded and installed](http://www.mongodb.org/display/DOCS/Getting+Started) MongoDB, you can start it like so
+```shell
+$ mongod
+```
+3. You will need your own Reddit account and API credentials for PRAW (used for mining reddit).Refer to this [guide](https://github.com/JosephLai241/URS/blob/master/docs/How%20to%20Get%20PRAW%20Credentials.md) to get your credentials, then update the environment variables located in .env.
 
 
 Before running the app assuming that **python 3.7.xx** is installed on development machine
